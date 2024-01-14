@@ -1,4 +1,4 @@
-<div class="bg-zinc-800 col-span-1 md:row-span-2 rounded-lg relative overflow-hidden border-solid border-2 border-slate-600">
+<div class="card bg-zinc-800 col-span-1 md:row-span-2 rounded-lg relative overflow-hidden border-solid border-2 border-slate-600">
     <div class="flex flex-col h-full">
         <div class="flex-grow">
             <img src="/friends.jpg" class="object-cover w-full h-full" alt="Friends Image"/>
@@ -8,3 +8,20 @@
         </div>
     </div>
 </div>
+
+<style>
+    /* Estilo CSS */
+    .card {
+      opacity: 0;
+      transform: translateY(-200px);
+      animation: slide-up 0.7s ease forwards;
+      animation-delay: 0.9s;
+    }
+    
+    @keyframes slide-up {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>

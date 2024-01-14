@@ -1,4 +1,4 @@
-<div class="bg-zinc-800 p-7 md:col-span-2 row-span-1 rounded-lg flex relative overflow-hidden border-solid border-2 border-slate-600 ">
+<div class="card bg-zinc-800 p-7 md:col-span-2 row-span-1 rounded-lg flex relative overflow-hidden border-solid border-2 border-slate-600 ">
     <div class="flex flex-col">
         <div>
             <p><strong class="font-bold">Time zone</strong></p>
@@ -23,3 +23,20 @@ setInterval(getSpainTime, 1000);
 // Llama a la función una vez para establecer la hora inicial
 getSpainTime();
 </script>
+
+<style>
+    /* Estilo CSS */
+    .card {
+      opacity: 0;
+      transform: translateY(-200px);
+      animation: slide-up 0.7s ease forwards;
+      animation-delay: 0.6s;
+    }
+    
+    @keyframes slide-up {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>
