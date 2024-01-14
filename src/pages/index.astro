@@ -9,47 +9,24 @@ import Currently from '../components/Currently.astro';
 import Project from '../components/Project.astro';
 import Tag from '../components/Tag.astro';
 
-import Card from '../components/Card.astro';
-import { Icon } from 'astro-icon/components'
-
 ---
 
 <Layout 
 	title="Mario López - Software Developer"
 	description="A software developer with strong focus on versatility and minimalism">
 	
-	<main>
-		<Intro />
-		<AboutMe />
-		<Contact />
-		<Timezone />
-		<Picture />
-		<Currently />
-		<Project />
-		<Tag />
+	<main class="flex flex-col items-center justify-center h-screen mx-auto p-1 max-w-screen-xl text-white font-thin text-lg">
+		<div class="grid grid-cols-1 gap-2 md:grid-cols-4">
+			<Intro />
+			<AboutMe />
+			<Contact />
+			<Timezone />
+			<Picture />
+			<Tag />
+			<Currently />
+			<Project />
+		</div>
 	</main>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		max-width: calc(1200px);
-		color: white;
-		font-size: 18px;
-		line-height: 1.6;
 
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 10px;
-		grid-auto-rows: minmax(100px, auto);
-		font-weight: 100;
-	}
-
-	@media (max-width: 500px) {
-		main {
-			grid-template-columns: repeat(1, 1fr);
-		}
-  	}
-
-</style>
