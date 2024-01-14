@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Intro from '../components/Intro.astro';
+import Contact from '../components/Contact.astro';
 import Card from '../components/Card.astro';
 import { Icon } from 'astro-icon/components'
 
@@ -11,9 +12,8 @@ import { Icon } from 'astro-icon/components'
 	description="A software developer with strong focus on versatility and minimalism">
 	
 	<main>
-
 		<Intro />
-
+		<Contact />
 	</main>
 </Layout>
 
@@ -21,12 +21,18 @@ import { Icon } from 'astro-icon/components'
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
-		transition: all 0.4s;
+		display: grid;
+
+		grid-template-columns: repeat(4, 1fr);
+		gap: 5px;
+		grid-auto-rows: minmax(100px, auto);
+
+		align-items: center;
+		justify-content: center;
 	}
 
 </style>
