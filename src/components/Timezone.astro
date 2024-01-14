@@ -11,9 +11,10 @@
 // Obtén la hora actual en España
 function getSpainTime() {
     const spainTimeElement = document.getElementById('spainTime');
-    const options = { timeZone: 'Europe/Madrid', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-    const spainTime = new Date().toLocaleTimeString('es-ES', options);
-    spainTimeElement.textContent = spainTime + " CET";
+    const spainTime = new Date().toLocaleTimeString('es-ES');
+    if (spainTimeElement != null) {
+        spainTimeElement.textContent = spainTime + " CET";
+    }
 }
 
 // Actualiza la hora cada segundo
