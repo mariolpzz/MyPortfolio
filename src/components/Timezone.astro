@@ -1,0 +1,24 @@
+<div class="bg-zinc-800 p-7 col-span-2 row-span-1 row-start-2 rounded-lg flex relative overflow-hidden border-solid border-2 border-slate-600 ">
+    <div class="flex flex-col">
+        <div>
+            <p><strong class="font-bold">Time zone</strong></p>
+            <p id="spainTime" class="text-white text-6xl"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+// Obtén la hora actual en España
+function getSpainTime() {
+    const spainTimeElement = document.getElementById('spainTime');
+    const options = { timeZone: 'Europe/Madrid', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const spainTime = new Date().toLocaleTimeString('es-ES', options);
+    spainTimeElement.textContent = spainTime + " CET";
+}
+
+// Actualiza la hora cada segundo
+setInterval(getSpainTime, 1000);
+
+// Llama a la función una vez para establecer la hora inicial
+getSpainTime();
+</script>
